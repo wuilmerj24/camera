@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Fotos tomadas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list *ngFor="let item of images; let i=index;">
+		<div class="fotosVideos" >
+			<img [src]="item" style="height: 20vh; width: 100%;" />
+		</div>
+	</ion-list>
+</ion-content>
+<ion-footer >
+	<ion-toolbar transparent>
+		<button ion-item (tap)="fotoOptions()" text-center no-lines color="dark">Subir foto</button>
+	</ion-toolbar>
+</ion-footer>
